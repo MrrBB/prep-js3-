@@ -8,12 +8,24 @@
 var str = "урок-3-был слишком легким";
 // alert(upCase(str.replace(/-/g, ' ').replace(/м/g, 'о').substring(0, 18)));
 
+
+
+
+
+
 let arr = [20, 33, 1, 'Человек', 2, 3];
 let sum = 0;
 for (let i = 0; i < arr.length; i++){
-	sum = Math.sqrt(sum + parseInt(Math.pow(arr[i],2)));
-	// console.log(sum)
+	if ((isNaN(arr[i].toString())) === false) {
+	let multip = Math.pow(arr[i],3);
+	sum = sum  + parseInt(multip);
+	let sqrtF = Math.sqrt(sum);	
+	console.log(sqrtF)
+}
 };
+
+
+
 // let arg = prompt('введите значеие аргумента')
 function takeArgument(arg) {
 	if ((typeof(arg)) === 'string') { if (arg.length > 50){
